@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>Disable Right Click On A Target Element In Jquery</title>
+        
+        <script type="text/javascript" src="JqueryFiles/jquery-3.6.3.js"> </script>
+
+        <style type="text/css">
+            .box{
+              border: 2px dotted olive;
+              height: 50px;
+              width: 50%;
+            }
+        </style>
+
+        <script type="text/javascript">
+            alert("Hello");
+            $(document).ready(function(){
+                $('#demo').bind('contextmenu', function(e) {
+                    alert("Right Click Disabled Here");
+                return false;
+                });
+                
+$('#pid').bind("contextmenu", function(e) {
+                alert("Right Click Disabled Here");
+    return true;
+});
+               
+            });
+
+            $(document).bind("contextmenu", function(e) {
+                alert("Right Click Disabled On This Page");
+    return false;
+});
+
+        </script>
+
+    </head>
+    <body>
+        <div id="demo" class="box preventLeftClick">
+            Right Click Disable On This Area:) 
+        </div>
+         <div id="demo" class="box">
+            Right Click Enable This Area:) 
+         </div>
+         <p id="pid">
+            This is a mistake. Here, we’ll refer to some time-honored typesetting conventions, with an emphasis on readability, and offer guidance on adapting them effectively for devices and screens. We’ll see that the ability to embed fonts with @font-face is not by itself a solution to all of our typographic challenges.
+         </p>
+            
+        
+         
+    </body>
+</html>
